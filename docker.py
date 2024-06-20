@@ -178,7 +178,7 @@ elif select == 'About/Select':
                 "</b>"
                 "<p style = 'font-size:15px;text-align:center;font-family:Comic Sans MS'>Docker uses a client-server architecture.</p>"
                 "</p>", unsafe_allow_html=True)
-    st.image('https://csharpcorner-mindcrackerinc.netdna-ssl.com/article/docker-architecture-environtment-advantages/Images/Docker%20Architecture.png')
+    st.image('docker.png')
 
     st.markdown("<h2 style='text-align:center;color:white;'>" 
                 "<p style='font-size:25px;text-align:left;font-family: Roboto'>"
