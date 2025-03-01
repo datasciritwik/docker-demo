@@ -17,21 +17,22 @@ import streamlit as st
 #14. docker rmi,
 #15. docker build
 
+st.html("<style>[data-testid='stHeaderActionElements'] {display: none;}</style>")
 
-a = """
-<style>
-#MainMenu {visibility : hidden; }
-footer {visibility : hidden; }
-</style>
-"""
-st.markdown(a, unsafe_allow_html=True)
+# a = """
+# <style>
+# #MainMenu {visibility : hidden; }
+# footer {visibility : hidden; }
+# </style>
+# """
+# st.markdown(a, unsafe_allow_html=True)
 
 st.markdown("<h1 style='text-align: center; color: #0E8500;'>DOCKER COMMANDS</h1>", unsafe_allow_html=True)
 
 commands = ['About/Select','docker –version', 'docker pull', 'docker run', 'docker ps', 'docker ps -a', 'docker exec', 'docker stop', 'docker kill',
             'docker commit', 'docker login', 'docker push', 'docker images', 'docker rm', 'docker rmi', 'docker build'
             ]
-select = st.selectbox('', commands)
+select = st.selectbox(' ', commands, label_visibility="collapsed")
 
 if select == 'docker –version':
     cmd = ('docker –version')
@@ -170,7 +171,7 @@ elif select == 'docker build':
                 '</strong>', unsafe_allow_html=True)
 
 elif select == 'About/Select':
-    st.markdown("<br></br>"
+    st.markdown("<h3 style='font-size:30px;color:grey;'>All about docker...</h3>"
                 "<p style='text-align:center;font-size:20px'>Docker helps developers bring their ideas to life by conquering the complexity of app development. We simplify and accelerate development workflows with an integrated dev pipeline and through the consolidation of application components. Actively used by millions of developers around the world, Docker Desktop and Docker Hub provide unmatched simplicity, agility and choice.</p>", unsafe_allow_html=True)
 
     st.markdown("<p style='font-size:35px;text-align:center'>"
