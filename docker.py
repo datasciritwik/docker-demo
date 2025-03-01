@@ -19,13 +19,13 @@ import streamlit as st
 
 st.html("<style>[data-testid='stHeaderActionElements'] {display: none;}</style>")
 
-# a = """
-# <style>
-# #MainMenu {visibility : hidden; }
-# footer {visibility : hidden; }
-# </style>
-# """
-# st.markdown(a, unsafe_allow_html=True)
+a = """
+<style>
+#MainMenu {visibility : hidden; }
+footer {visibility : hidden; }
+</style>
+"""
+st.markdown(a, unsafe_allow_html=True)
 
 st.markdown("<h1 style='text-align: center; color: #0E8500;'>DOCKER COMMANDS</h1>", unsafe_allow_html=True)
 
